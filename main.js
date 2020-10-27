@@ -1,5 +1,12 @@
-var hamburger = $(".hamburger-menu.active");
+var hamburger = $(".header-right > a");
+var menu = $(".hamburger-menu");
+var close = $(".hamburger-menu .close");
 
+// eventi click
 hamburger.click( function() {
-  $(".hamburger-menu ul li a").slideToogle();
+  menu.addClass("active");
 });
+
+close.click( function() {
+  menu.removeClass("active");
+})
